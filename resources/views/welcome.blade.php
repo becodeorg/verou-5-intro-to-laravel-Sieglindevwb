@@ -9,7 +9,9 @@
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Not Ross proposing to everyone, quia eaque quae dolor magni magnam in optio maxime nostrum libero, neque unde non cupiditate accusamus itaque commodi, possimus quidem ut.</p>
     </article>
 
-    <a href="{{ route('post') }}">More posts</a>
+   
+    <a class="container d-flex mt-4" href="{{ route('post') }}">More posts</a>
+
 
 @include('footer')
 
