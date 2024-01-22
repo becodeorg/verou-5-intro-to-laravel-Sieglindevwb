@@ -13,9 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
 
 // Using the index() method in the HomeController class 
-//Route::get('/', [HomeController::class, 'index']); // PREFERRED WAY
+Route::get('/', function() {
+    return view("welcome");
+}); // PREFERRED WAY
+
+Route::get("/post", function () {
+    return view("post");
+});
