@@ -5,7 +5,7 @@
             
             <h1 class="mb-4">Give input</h1>
 
-            <form method="POST" action="/register">
+            <form method="POST" action="{{ route('registerReview') }}">
                 @csrf
                 <div class="form-row">
                     <div class="col-md-4 mb-3">
@@ -32,6 +32,11 @@
                 <div class="form-group">
                     <label for="emailAdress">Email address</label>
                     <input type="email" class="form-control" id="emailAdress" name="emailAdress" placeholder="name@example.com" required>
+                
+
+                @error('emailAdress')
+                    <p class="alert alert-danger">{{ $message }}</p>
+                @enderror
                 </div>
 
                 <div class="form-group">
