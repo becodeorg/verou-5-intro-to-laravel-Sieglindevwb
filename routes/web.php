@@ -29,3 +29,4 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('/post', [HomeController::class, 'show']) -> name('post');
 
 Route::get('register', [RegisterController::class, 'create']);
+Route::post('register', [RegisterController::class, 'store']);
