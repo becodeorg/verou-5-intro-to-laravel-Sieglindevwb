@@ -5,7 +5,7 @@
             
             <h1 class="mb-4">Give input</h1>
 
-            <form method="POST" action="{{ route('registerReview') }}">
+            <form method="POST" action="{{ route('handleRegister') }}">
                 @csrf
                 <div class="form-row">
                     <div class="col-md-4 mb-3">
