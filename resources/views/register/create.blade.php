@@ -10,7 +10,7 @@
                 <div class="form-row">
                     <div class="col-md-4 mb-3">
                         <label for="firstName">First name</label>
-                        <input type="text" class="form-control" id="firstName" name="firstName" placeholder="" value="Mark" required>
+                        <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" value="Mark" required>
                     </div>
 
                     <div class="col-md-4 mb-3">
