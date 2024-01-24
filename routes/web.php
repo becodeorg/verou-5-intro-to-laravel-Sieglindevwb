@@ -28,5 +28,8 @@ use App\Http\Controllers\RegisterController;
 Route::get('/', [HomeController::class, 'index']) -> name('home');
 Route::get('/post', [HomeController::class, 'show']) -> name('post');
 
+Route::get('/users', [UserController::class, 'index']) -> name('pageUsers');
+Route::get('/users/{user}', [UserController::class, 'show']) -> name ('showUser');
+
 Route::get('/register', [RegisterController::class, 'index']) -> name ('registerReview');
 Route::post('/register', [RegisterController::class, 'create'])-> name ('handleRegister'); 
