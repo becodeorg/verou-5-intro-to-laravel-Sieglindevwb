@@ -29,15 +29,25 @@ class ReviewController extends Controller
     {
         // Validation logic for review submission
         $request->validate([
-            'content' => 'required',
+            'textereaInfo' => 'required',
+            'firstName' => 'required',
             // Add other validation rules as needed
         ]);
 
+        
+         $userIdentifier = auth()->check() ? auth()->id() : 1;
+
         // Create a new review
         $review = new Review([
-            'user_id' => auth()->id(), // Assuming users are authenticated
-            'content' => $request->input('content'),
+            'user_id' => $userIdentifier, // Assuming you have a way to identify the user
+            'textereaInfo' => $request->input('textereaInfo', ''), // Provide a default value
+            'firstName' => $request->input('firstName'),
+            'lastName' => $request->input('lastName'),
+            'userName' => $request->input('userName'),
+            'emailAdress' => $request->input('emailAdress'),
+            'subjectSelect' => $request->input('subjectSelect'),
         ]);
+
         $review->save();
 
         // Redirect or return a response as needed
