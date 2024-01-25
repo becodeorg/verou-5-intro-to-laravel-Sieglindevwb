@@ -18,8 +18,7 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'firstName', // Add any other fields you want to allow for mass assignment
-        'lastName',
+        'name',
         'username',
         'email',
         'password',
