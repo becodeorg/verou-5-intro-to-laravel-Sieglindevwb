@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\ReviewController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,5 +32,6 @@ Route::get('/post', [HomeController::class, 'show']) -> name('post');
 Route::get('/users', [UserController::class, 'index']) -> name('showUsers');
 Route::get('/users/{id}', [UserController::class, 'show']) -> name ('showUser');
 
-Route::get('/register', [RegisterController::class, 'index']) -> name ('registerReview');
-Route::post('/register', [RegisterController::class, 'create'])-> name ('handleRegister'); 
+Route::get('/reviews', [ReviewController::class, 'index']) -> name ('reviews.index');
+Route::get('//reviews/{id}', [ReviewController::class, 'show'])-> name ('reviews.show'); 
+Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store');
