@@ -26,13 +26,10 @@
                         <a class="nav-link" href="{{ route('home') }}">Home<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('registerReview') }}">Review</a>
+                        <a class="nav-link" href="{{ route('registerReview') }}">Register</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('post') }}">Episodes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('contactUsers') }}">Contact</a>
                     </li>
                 </ul>
             </div>

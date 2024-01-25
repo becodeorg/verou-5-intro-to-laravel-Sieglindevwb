@@ -3,7 +3,7 @@
     <section class="container mt-5 mb-5">
         <main class="bg-light p-4 rounded border" >
             
-            <h1 class="mb-4">Give input</h1>
+            <h1 class="mb-4">Register here:</h1>
 
             <form method="POST" action="{{ route('handleRegister') }}">
                 @csrf
@@ -39,20 +39,9 @@
                 @enderror
                 </div>
 
-                <div class="form-group">
-                    <label for="subjectSelect">Subject/Title</label>
-                    <select class="form-control" id="subjectSelect" name="subjectSelect" required>
-                        <option>Favorite post</option>
-                        <option>Update post</option>
-                        <option>Review post</option>
-                        <option>Delete post</option>
-                        <option>Other</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="textereaInfo">Extra info</label>
-                    <textarea class="form-control" id="textereaInfo" name="textereaInfo" rows="3" required>Type here...</textarea>
+                 <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
                 </div>
 
                 <button type="submit" class="btn btn-primary">Submit</button>
