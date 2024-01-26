@@ -31,7 +31,7 @@ class ReviewController extends Controller
         $request->validate([
             'textereaInfo' => 'required',
             'firstName' => 'required',
-            // Add other validation rules as needed
+            'userName' => 'required',
         ]);
 
         
@@ -39,8 +39,7 @@ class ReviewController extends Controller
 
         // Create a new review
         $review = new Review([
-            'user_id' => $userIdentifier, // Assuming you have a way to identify the user
-            'textereaInfo' => $request->input('textereaInfo', ''), // Provide a default value
+            'textereaInfo' => $request->input('textereaInfo', ''),
             'firstName' => $request->input('firstName'),
             'lastName' => $request->input('lastName'),
             'userName' => $request->input('userName'),
